@@ -19,7 +19,7 @@ jobs:
       matrix:
         os: [macos-11]
     steps:
-    - uses: actions/checkout@e2f20e631ae6d7dd3b768f56a5d2af784dd54791 # v2.5.0
+    - uses: actions/checkout@v2
       with:
         submodules: 'true'
     - name: Install system packages
@@ -45,7 +45,7 @@ jobs:
       matrix:
         os: [ubuntu-latest]
     steps:
-    - uses: actions/checkout@e2f20e631ae6d7dd3b768f56a5d2af784dd54791 # v2.5.0
+    - uses: actions/checkout@v2
       with:
         submodules: 'true'
     - name: Install system packages
@@ -72,10 +72,10 @@ jobs:
         os: ["ubuntu-latest"]
         python-version: ["3.8"]
     steps:
-    - uses: actions/checkout@e2f20e631ae6d7dd3b768f56a5d2af784dd54791 # v2.5.0
+    - uses: actions/checkout@v2
       with:
         submodules: 'true'
-    - uses: mamba-org/provision-with-micromamba@f347426e5745fe3dfc13ec5baf20496990d0281f # v14
+    - uses: mamba-org/provision-with-micromamba@v2
       with:
         cache-downloads: true
         cache-env: true
@@ -134,10 +134,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Code linting for C++
     steps:
-    - uses: actions/checkout@e2f20e631ae6d7dd3b768f56a5d2af784dd54791 # v2.5.0
+    - uses: actions/checkout@v2
       with:
         submodules: 'true'
-    - uses: actions/setup-python@7f80679172b057fc5e90d70d197929d454754a5a # v4.3.0
+    - uses: actions/setup-python@v2
       with:
         python-version: "3.8"
         architecture: 'x64'
@@ -152,10 +152,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Build docs using Sphinx
     steps:
-    - uses: actions/checkout@e2f20e631ae6d7dd3b768f56a5d2af784dd54791 # v2.5.0
+    - uses: actions/checkout@v2
       with:
         submodules: 'true'
-    - uses: actions/setup-python@7f80679172b057fc5e90d70d197929d454754a5a # v4.3.0
+    - uses: actions/setup-python@v2
       with:
         python-version: "3.8"
         architecture: 'x64'
